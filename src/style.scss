@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+$bgcl:linear-gradient(90deg, rgba(24,24,24,1) 0%, rgba(0,0,0,1) 100%); /*Color de Fondo */
+$fontcl: #ffff;  /*Color de fuente */
+$Marcocl:#303030;
+
+$TituloFontSize:2vw; /*Tamaño de la fuente del titulo*/
+$TituloFontFamily: 'Petit Formal Script'; /*Fuente del titulo*/
+
+$Mainmr:8%; /*Margen principal*/
+$GridGap: 22px; /*grid gap*/
+
+$Maximag:450px; /*Max  Imagen 450px*/
+$Minimag:$Maximag; /*Min Imagen*/
+
+$ErrorFontsize:2rem; /*Error font size */
+$ErrorFontfamily:'VT323', monospace; /*Error font family */
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+};
+
+body {
+    background: $bgcl;
+    color: $fontcl;
+    a {
+        text-decoration: none;
+        color: $fontcl;
+    };
+};
+
+
+
+header {
+    @include flex-center;
+    font-size: $TituloFontSize;
+    font-family: $TituloFontFamily;
+    
+};
+
+.MainContainer { /*Contenedor Principal*/ 
+    margin-right: $Mainmr;
+    margin-left: $Mainmr;
+}
+
+.ImagCont { /*Principal Contenedor de  Imagen (Inicio)*/ 
+    display: grid;
+    grid-gap: $GridGap;
+    grid-template-columns: repeat(auto-fill,minmax($Maximag,1fr)) ;
+    // background-color: #4b4b4b;
+
+    img {
+        max-width: 100%;
+        max-height: auto;
+    };
+};
+
+// .info {
+
+// };
+
+.SubIteamCont { /*Contenedor de la Imagen y texto (Inicio)*/ 
+    width: $Maximag;
+    height: $Minimag;    
+    overflow: hidden;
+    text-align: center;
+    // border: 10px solid $Marcocl;
+};
+
+.ErrorContainer { /*Contenedor del ErrorHandle */
+    @include flex-center;
+    font-size: $ErrorFontsize;
+    font-family: $ErrorFontfamily;
+};
