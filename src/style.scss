@@ -40,6 +40,26 @@ header {
     
 };
 
+footer { /*Contenedor del footer */
+    display: flex;
+    align-items: start;
+    margin-top: 100vh;
+    img {
+        width: 100px;
+        border-radius:10px;
+    };
+    h2,p{
+        margin-left: 1vw;
+        font-family: 'Times New Roman', Times, serif
+    };
+
+    .FraneImg { /*Creditos del footer*/
+        height: 100px;
+        width: 100px;
+        overflow: hidden;
+    }
+};
+
 .MainContainer { /*Contenedor Principal*/ 
     margin-right: $Mainmr;
     margin-left: $Mainmr;
@@ -73,4 +93,6 @@ header {
     @include flex-center;
     font-size: $ErrorFontsize;
     font-family: $ErrorFontfamily;
+    align-items: center;
+    flex-direction: column;
 };
