@@ -7,7 +7,7 @@
 
 </script>
 
-{#if paints.length == 0 } <ErrorHandle msg = "No hay imagenes todavia :(" /> {:else}
+{#if paints.length == 0 } <ErrorHandle msg = "No images yet :(" /> {:else}
     <div class="ImagCont">
         {#each paints as paint}
             <section class="SubIteamCont">

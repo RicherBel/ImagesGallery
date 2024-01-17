@@ -29,6 +29,7 @@ export async function Realizar_Query(query){
 	catch(err)
 	{
 		console.log(err);	
+		return String_A_Devolver = [];
 	}
 	finally
 	{
